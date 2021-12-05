@@ -18,6 +18,8 @@ while playing_game:
     a_or_b = input("Who has more followers on Instagram? Type 'a' or 'b': ").lower()
     if 'a' in a_or_b and pick1['follower_count'] > pick2['follower_count']:
         print("Correct!")
+        print(f"{pick1['name']} has {pick1['follower_count']} million followers on Instagram.")
+        print(f"while {pick2['name']} has {pick2['follower_count']} million followers on Instagram.")
         score += 1
         pick1 = pick2
         pick2 = random.choice(data)
@@ -25,6 +27,7 @@ while playing_game:
     elif 'b' in a_or_b and pick2['follower_count'] > pick1['follower_count']:
         print("Correct!")
         print(f"{pick1['name']} has {pick1['follower_count']} million followers on Instagram")
+        print(f"while {pick2['name']} has {pick2['follower_count']} million followers on Instagram.")
         score += 1
         pick1 = pick2
         pick2 = random.choice(data)
